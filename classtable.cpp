@@ -1,15 +1,19 @@
 ﻿#include <iostream>
 using namespace std;
-#include <math.h>
 #include "windows.h"
+#define _USE_MATH_DEFINES
 
+
+HANDLE hConsole;
 
 int main()
 {
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
 	int t;
+	SetConsoleTextAttribute(hConsole, a);
 	cout << "Впиши свій номер дня тижня \n щоб дізнатися про заняття наприклад\n(Ведіт число від 1 до 7)\n 1-понеділок,2-вівторок, 3-середа, 4-четврег , 5-пятниця , 6-субота , 7-неділя " << endl;
 	cin >> t;
 	switch (t)
